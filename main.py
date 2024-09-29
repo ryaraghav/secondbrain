@@ -7,7 +7,7 @@ from src.agent import create_agent
 from langchain_openai import ChatOpenAI
 
 # Load LLM
-llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 # Load config file
 with open('config/sources.json', 'r') as f:
@@ -28,7 +28,6 @@ for source in sources:
     tools.append(retriever)
 
 # Load prompt
-# set the LANGCHAIN_API_KEY environment variable (create key in settings)
 from langchain import hub
 prompt = hub.pull("hwchase17/openai-functions-agent")
 
