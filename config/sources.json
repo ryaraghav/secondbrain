@@ -6,6 +6,12 @@
       "description": "For questions related to motivation"
     },
     {
+      "type": "youtube",
+      "path": "https://www.youtube.com/watch?v=LpbBzmXrzEY",
+      "tool_name": "yt_video_on_speaking",
+      "description": "How to speak more confidently and persuasively"
+    },
+    {
       "type": "text",
       "path": "data/delegating.txt",
       "tool_name": "delegating_tool",
