@@ -1,0 +1,11 @@
+openai
+langchain
+ipykernel
+python-dotenv
+langchain_openai
+langchain_community
+langchain_core
+youtube-transcript-api
+#faiss-gpu
+chromadb
+streamlit

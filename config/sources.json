@@ -1,0 +1,14 @@
+[
+    {
+      "type": "youtube",
+      "path": "https://www.youtube.com/watch?v=pnrpPWGDyyA",
+      "tool_name": "yt_video_on_motivation",
+      "description": "For questions related to motivation"
+    },
+    {
+      "type": "text",
+      "path": "data/delegating.txt",
+      "tool_name": "delegating_tool",
+      "description": "For questions related to delegating"
+    }
+  ]  

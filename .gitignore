@@ -1,0 +1,8 @@
+.env
+myvenv/*
+*.code-workspace
+data/chroma_db/*
+src/__pycache__/*
+src/data/*
+test.py
+onefile.py
