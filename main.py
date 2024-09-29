@@ -6,15 +6,6 @@ from src.tools import create_retriever
 from src.agent import create_agent
 from langchain_openai import ChatOpenAI
 
-# Load environment variables
-load_dotenv(dotenv_path="data/.env")
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
-"""
-from langchain_openai import OpenAIEmbeddings
-# Ensure the API key is correct
-embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-"""
 # Load LLM
 llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
 
@@ -35,8 +26,9 @@ for source in sources:
 
     retriever = create_retriever(data, source['tool_name'], source['description'])
     tools.append(retriever)
-"""
+
 # Load prompt
+# set the LANGCHAIN_API_KEY environment variable (create key in settings)
 from langchain import hub
 prompt = hub.pull("hwchase17/openai-functions-agent")
 
@@ -44,4 +36,3 @@ prompt = hub.pull("hwchase17/openai-functions-agent")
 agent_executor = create_agent(llm, tools, prompt)
 response = agent_executor.invoke({"input": "how can I prepare to delegate a task"})
 print(response)
-"""
